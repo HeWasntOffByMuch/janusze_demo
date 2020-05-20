@@ -172,6 +172,9 @@
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    const audio = new Audio('./super_extra_lux_muzik.mp3');
+    audio.play();
+
     document.querySelectorAll('img').forEach(el => {
       el.addEventListener('click', () => {
         const height = el.height;
