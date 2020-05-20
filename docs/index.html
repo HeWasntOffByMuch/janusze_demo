@@ -22,6 +22,8 @@
   <img class="face" id="baszak" src="./baszak.png"></img>
   <img class="face" id="matt" src="./matt.png"></img>
   <img class="face" id="adamf" src="./adamf.png"></img>
+  <img class="face" id="nosacz" src="./nosacz.png"></img>
+  <img class="face" id="nosacz2" src="./nosacz.png"></img>
 </body>
 <style>
   html,
@@ -32,6 +34,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
 
   body {
@@ -111,6 +114,22 @@
     animation-timing-function: linear;
   }
 
+  #nosacz {
+    bottom: 0;
+    left: 33vw;
+    animation: JANUSZ 3400ms infinite;
+    animation-timing-function: linear;
+  }
+
+  #nosacz2 {
+    top: 40vh;
+    left: 0;
+    animation: JANUSZ2 3400ms infinite;
+    animation-timing-function: linear;
+    animation-delay: 1500ms;
+    transform: translateX(-50vw);
+  }
+
   @keyframes JANUSZ_LEFT {
     50% {
       transform: translateX(-20vh);
@@ -162,6 +181,34 @@
 
     50% {
       transform: translateY(50vw);
+    }
+  }
+
+  @keyframes JANUSZ {
+    0% {
+      transform: translateY(20vh);
+    }
+
+    80% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(20vh);
+    }
+  }
+
+  @keyframes JANUSZ2 {
+    0% {
+      transform: translateX(-50vw);
+    }
+
+    80% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateX(-50vw);
     }
   }
 
