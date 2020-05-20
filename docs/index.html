@@ -25,6 +25,10 @@
   <img class="face" id="adamf" src="./adamf.png"></img>
   <img class="face" id="nosacz" src="./nosacz.png"></img>
   <img class="face" id="nosacz2" src="./nosacz.png"></img>
+  <iframe src="./super_extra_lux_muzik.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+  <audio id="player" autoplay loop>
+    <source src="./super_extra_lux_muzik.mp3" type="audio/mp3">
+</audio>
 </body>
 <style>
   html,
@@ -220,9 +224,6 @@
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const audio = new Audio('./super_extra_lux_muzik.mp3');
-    audio.play();
-
     document.querySelectorAll('img').forEach(el => {
       el.addEventListener('click', () => {
         const height = el.height;
