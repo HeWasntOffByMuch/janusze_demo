@@ -14,8 +14,14 @@
     <img alt="" border="0" src="https://www.paypal.com/en_PL/i/scr/pixel.gif" width="1" height="1" />
     </form>
     
-  <img id="kpiotr" src="./kpiotr.png"></img>
-  <img id="mike" src="./mike.png"></img>
+  <img class="face" id="kpiotr" src="./kpiotr.png"></img>
+  <img class="face" id="mike" src="./mike.png"></img>
+  <img class="face" id="doris" src="./doris.png"></img>
+  <img class="face" id="marcin" src="./marcin.png"></img>
+  <img class="face" id="magda" src="./magda.png"></img>
+  <img class="face" id="baszak" src="./baszak.png"></img>
+  <img class="face" id="matt" src="./matt.png"></img>
+  <img class="face" id="adamf" src="./adamf.png"></img>
 </body>
 <style>
   html,
@@ -38,22 +44,70 @@
     margin: 32px;
   }
 
-  #kpiotr {
+  .face {
     position: absolute;
+    height: 170px;
+  }
+
+  #kpiotr {
     top: 0;
     left: 0;
-    height: 150px;
     animation: JANUSZ_LEFT 500ms infinite;
   }
 
+  #marcin {
+    top: 50vh;
+    left: 0;
+    animation: SLIDE_H 1500ms infinite;
+    animation-timing-function: linear;
+  }
+
+  #matt {
+    top: 20vh;
+    left: 0;
+    animation: SLIDE_V 1500ms infinite;
+    animation-timing-function: linear;
+  }
+
   #mike {
-    position: absolute;
     top: 0;
-    right: 0;
-    height: 150px;
+    right: -2vw;
     margin: 40px;
     filter: drop-shadow(0 0 8px white);
     animation: ROTATE 1000ms infinite;
+    animation-timing-function: linear;
+  }
+
+  #doris {
+    bottom: 0;
+    right: 0;
+    margin: 40px;
+    filter: drop-shadow(0 0 8px red);
+    animation: ROTATE 1000ms infinite;
+    animation-timing-function: linear;
+  }
+
+  #adamf {
+    bottom: 0;
+    left: 0;
+    margin: 40px;
+    filter: drop-shadow(0 0 8px green);
+    animation: SWAY 1200ms infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  #baszak {
+    top: 20vh;
+    right: 0;
+    margin: 40px;
+    animation: SWAY 1400ms infinite;
+    animation-timing-function: linear;
+  }
+
+  #magda {
+    top: 30vh;
+    left: 33vw;
+    animation: ORBIT 3400ms infinite;
     animation-timing-function: linear;
   }
 
@@ -75,6 +129,45 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  @keyframes SWAY {
+    0% {
+      transform: rotate(-45deg);
+    }
+
+    50% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes SLIDE_H {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(50vw);
+    }
+  }
+
+  @keyframes SLIDE_V {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(50vw);
+    }
+  }
+
+  @keyframes ORBIT {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
   }
 </style>
 <script>
