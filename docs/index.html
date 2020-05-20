@@ -25,9 +25,9 @@
   <img class="face" id="adamf" src="./adamf.png"></img>
   <img class="face" id="nosacz" src="./nosacz.png"></img>
   <img class="face" id="nosacz2" src="./nosacz.png"></img>
-  <iframe src="./250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+  <iframe src="./super_extra_lux_muzik.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
   <audio id="player" autoplay loop>
-    <source src="./super_extra_lux_muzik.mp3" type="audio/mp3">
+    <source src="./250-milliseconds-of-silence.mp3" type="audio/mp3">
 </audio>
 </body>
 <style>
@@ -227,7 +227,7 @@
     document.querySelectorAll('img').forEach(el => {
       el.addEventListener('click', () => {
         const height = el.height;
-        console.log(height)
+
         el.style.height = Math.min(height * 1.2, 300) + 'px';
       });
     })
